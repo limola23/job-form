@@ -19,7 +19,7 @@ jsonBtn.addEventListener("click", function () {
         "other": other.value
     }
   
-    if (data.name === "" || data.lastname === "" || data.wage === "" || data.email === "" || (data.gender !== "Male" && data.gender !== "Female" && data.gender !== "Other") || (data.position !== "Developer" && data.position !== "Project Manager" && data.position !== "Admin Leader" && data.position !== "Driver" && data.position == "selected") || (data.position === "Other" && data.other == "")) {
+    if (data.name === "" || data.lastname === "" || data.wage === "" || data.email === "" || (data.gender !== "Male" && data.gender !== "Female" && data.gender !== "Other" || data.gender == "selected") || (data.position !== "Developer" && data.position !== "Project Manager" && data.position !== "Admin Leader" && data.position !== "Driver" || data.position === "selected") && (data.position === "Other" && data.other === "")) {
         alert("Please fill all the items in the form")
         return
     } else {
