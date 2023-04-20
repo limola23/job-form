@@ -5,6 +5,7 @@ let wage = document.querySelector('[aria-label="Wage"]')
 let email = document.querySelector('[aria-label="Email"]')
 let gender = document.querySelector('[aria-label="Gender"]')
 let position = document.querySelector('[aria-label="Position"]')
+let other = document.querySelector('[aria-label="Other"]')
 let jsonBtn = document.getElementById("btn-submit")
 
 jsonBtn.addEventListener("click", function () {
@@ -14,20 +15,18 @@ jsonBtn.addEventListener("click", function () {
         "wage": wage.value,
         "email": email.value,
         "gender": gender.value,
-        "position": position.value
+        "position": position.value,
+        "other": other.value
     }
-
-    if (data.name === "" || data.lastname === "" || data.wage === "" || data.email === "" || data.gender === !gender.value || data.position === !position.value) {
+  
+    if (data.name === "" || data.lastname === "" || data.wage === "" || data.email === "" || (data.gender !== "Male" && data.gender !== "Female" && data.gender !== "Other") || (data.position !== "Developer" && data.position !== "Project Manager" && data.position !== "Admin Leader" && data.position !== "Driver" && data.position == "selected") || (data.position === "Other" && data.other == "")) {
         alert("Please fill all the items in the form")
         return
-    }
-
-    else
+    } else {
         bd.push(data)
-
-        console.log (data)
-    alert("Thank you, your information was successfully submitted")
-
+        console.log(data)
+        alert("Thank you, your information was successfully submitted")
+    }
     document.querySelector('[aria-label="Name"]').value = ""
     document.querySelector('[aria-label="Lastname"]').value = ""
     document.querySelector('[aria-label="Wage"]').value = ""
@@ -36,6 +35,7 @@ jsonBtn.addEventListener("click", function () {
     document.querySelector('[aria-label="Position"]').value = "default"
 
 })
+
 
 
 gender.addEventListener("input", function changeColor() {
@@ -51,12 +51,12 @@ gender.addEventListener("input", function changeColor() {
     else if (gender.value === "Female") {
         jsonBtn.setAttribute("class", "btn btn-danger mt-5");
 
-    }  
+    }
 
     else {
         jsonBtn.setAttribute("class", "btn btn-dark mt-5");
     }
-    
+
 })
 
 position.addEventListener("input", function otherPosition() {
@@ -64,9 +64,9 @@ position.addEventListener("input", function otherPosition() {
     let other = document.getElementById("otherMm");
 
     if (position.value === "Other") {
-            other.setAttribute("class", "form-control");
+        other.setAttribute("class", "form-control");
     }
-    else if (position.value === "default"){
+    else if (position.value === "default") {
         other.setAttribute("class", "form-control d-none");
     }
     else {
