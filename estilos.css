@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    background-color: #e6e4e4c9;
+    height: 78vh;
+    border-radius: 20px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(219,219,219,0.67);
+-moz-box-shadow: 10px 10px 5px 0px rgba(219,219,219,0.67);
+box-shadow: 10px 10px 5px 0px rgba(219,219,219,0.67);
+}

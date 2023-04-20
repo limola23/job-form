@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application</title>
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="estilos.css" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+  <body>
+    <h1 class="text-center mt-5">Job form</h1>
+    <p class="text-center">
+      Please fill out the following details in order to submit your application
+    </p>
+    <div class="container d-flex flex-column align-items-center mt-2">
+        <div class="input-group input-group-sm mb-3 m-3 mt-4 pt-4">
+            <input type="text" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="Name">
+          </div>
+          <div class="input-group input-group-sm mb-3 m-3">
+            <input type="text" class="form-control" placeholder="Lastname" aria-label="Lastname" aria-describedby="Lastname">
+          </div>
+          <div class="input-group input-group-sm mb-3 m-3">
+            <input type="number" class="form-control" placeholder="Please insert your ideal Wage salary" aria-label="Wage" aria-describedby="Wage">
+          </div>
+          <div class="input-group input-group-sm mb-3 m-3">
+            <input type="email" class="form-control" placeholder="Insert your e-mail address" aria-label="Email" aria-describedby="Email">
+          </div>
+        <select class="form-select form-select-sm m-3" aria-label="Gender">
+            <option selected>Select your gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</op tion>
+          </select>
+ 
+        <select class="form-select form-select-sm m-3" aria-label="Position">
+        <option selected>Please select the role that you want to apply</option>
+        <option value="Developer">Developer</option>
+        <option value="Project Manager">Project Manager</option>
+        <option value="Admin Leader">Admin Leader</option>
+        <option value="Driver">Driver</option>
+        <option value="Other">Other</option>
+      </select>
+      <div class="input-group input-group-sm mb-3 m-3">
+        <input type="Other" class="form-control d-none" id="otherMm" placeholder="Add the position you would like to apply" aria-label="Other" aria-describedby="Other">
+      </div>
+      <button id="btn-submit" class="btn btn-dark mt-5">Submit</button>
+      <span class="small mt-3">*before submitting the information please fill out all of the fields or the system won't allow you to send the application form</span>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
